@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 //import{Ap} from './nuevaPag.js'
-import App from './components/App/App.js'
+import App from './components/App/App.js';
+import { render } from "react-dom";
+import {
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom";
+
+import Marvel from './components/App/Marvel.js';
 
 //componente
 /*function App(){
@@ -9,8 +17,21 @@ import App from './components/App/App.js'
 }*/
 
 //renderizacion
-ReactDOM.createRoot(document.getElementById('root')).render(
+/*ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <App/>
     </React.StrictMode>
+);*/
+
+//Renderizacion nueva
+const rootElement = document.getElementById("root");
+render(
+    <BrowserRouter>
+        <Routes>
+            <Route path ="/" element={<App />} />
+            <Route path='marvel' element={<Marvel />} />
+        </Routes>
+
+    </BrowserRouter>,
+    rootElement
 );

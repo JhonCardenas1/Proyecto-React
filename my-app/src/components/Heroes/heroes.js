@@ -1,6 +1,6 @@
 import React from "react";
 //import { ReactPropTypes } from "react";
-import ProTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './heroes.css';
 //import { heroes } from "../../data/data";
 
@@ -16,14 +16,20 @@ export default function HeroesCard({name,id,additional,owner,showAdditional}){
     </div>
 }
 
-HeroesCard.prototype = {
-    additional: ProTypes.shape({
-        notes: ProTypes.string,
-        link: ProTypes.string
+HeroesCard.propTypes = {
+    additional: PropTypes.shape({
+        notes: PropTypes.string,
+        link: PropTypes.string
 
     }),
-    name:ProTypes.string.isRequired,
-    id:ProTypes.string.isRequired,
-    owner:ProTypes.string.isRequired,
-    showAdditional: ProTypes.func.isRequired
+    name:PropTypes.string.isRequired,
+    id:PropTypes.string.isRequired,
+    owner:PropTypes.string.isRequired,
+    showAdditional: PropTypes.func.isRequired
+}
+
+HeroesCard.defaultProps ={
+    additional: {
+        notes:'no aditional Information'
+    }
 }
