@@ -30,6 +30,6 @@ HeroesCard.propTypes = {
 
 HeroesCard.defaultProps ={
     additional: {
-        notes:'no aditional Information'
+        notes:'No aditional Information'
     }
 }

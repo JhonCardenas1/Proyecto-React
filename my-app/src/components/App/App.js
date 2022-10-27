@@ -4,14 +4,15 @@ import React from 'react';
 import './App.css';
 import {heroes} from '../../data/data.js';
 import HeroesCard from '../Heroes/heroes.js';
+import showAdditional from './Marvel'
 
-function showAdditional(additional){
+/*function showAdditional(additional){
   const alertInformation = Object.entries(additional)
   .map(information => `${information[0]}:${information[1]}`)
   .join('\n');
   //alert(alertInformation);
   window.location.href = "./marvel";
-}
+}*/
 
 function App() {
   return (
