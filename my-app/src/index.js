@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 //import{Ap} from './nuevaPag.js'
 import App from './components/App/App.js'
 //comentario
+//Comentario2
 
 //componente
 /*function App(){
