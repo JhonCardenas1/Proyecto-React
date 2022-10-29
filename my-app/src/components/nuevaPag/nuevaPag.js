@@ -1,8 +1,17 @@
-import { Fragment } from "react";
+//import { Fragment } from "react";
+
+const fs = require ('fs');
+
+let data = fs.readFileSync('../../data/heroes.json');
+//console.log(data);
+let hero = JSON.parse(data).heores;
+console.log(hero);
+console.log(typeof(hero));
+
 
 
 //Componente
-export function Ap(){
+/*export function Ap(){
     return(
         <Fragment>
             <h1>Mi aplicacion</h1>
@@ -10,4 +19,4 @@ export function Ap(){
         </Fragment>
         
     )
-}
+}*/
